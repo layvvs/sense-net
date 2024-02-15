@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Custom
-audio_data
+data
 .DS_Store
 
 # Distribution / packaging

@@ -17,8 +17,13 @@ services:
     container_name: spark-worker
     environment:
       - SPARK_MASTER=spark://spark-master:7077
-      - SPARK_WORKER_MEMORY=4g
+      - SPARK_WORKER_CORES=10
+      - SPARK_WORKER_MEMORY=4G
+      - SPARK_DRIVER_MEMORY=4G
+      - SPARK_EXECUTOR_MEMORY=4G
       - SPARK_WORKLOAD=worker
       - SPARK_LOCAL_IP=spark-worker
+    volumes:
+      - /Users/layvvs/Desktop/Studying/BMSTU/Diploma/sense-net/data:/Users/layvvs/Desktop/Studying/BMSTU/Diploma/sense-net/data # needs in fix
     depends_on:
       - spark-master
